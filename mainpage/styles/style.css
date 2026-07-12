@@ -1,0 +1,432 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-linen: #FDFBF7;           
+    --nav-sage-light: #F1F5F2;    
+    --forest-deep: #1E2B22;         
+    --sage-muted: #7A8D80;        
+    --gold-accent: #C2A679;        
+    --text-light: #FDFBF7;         
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-linen);
+    color: var(--forest-deep);
+    font-family: var(--font-body);
+    padding-top: 90px; 
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+header {
+    height: 90px;
+    width: 100%;
+   
+    background:#ECE7D1; 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(122, 141, 128, 0.1);
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.right-links {
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: var(--forest-deep);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold-accent);
+}
+
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sun-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--forest-deep);
+}
+
+.sun-logo svg {
+    width: 28px;
+    height: 28px;
+    color: var(--gold-accent);
+    margin-bottom: 4px;
+
+    animation: slow-spin 20s linear infinite;
+}
+
+.studio-name {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--forest-deep);
+}
+
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--forest-deep);
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 16px 38px;
+    border-radius: 50px; 
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    border: 1px solid var(--forest-deep);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--text-light);
+    border-color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    display: inline-block;
+    color: var(--forest-deep);
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 50px; 
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 1px solid rgba(30, 43, 34, 0.2);
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    border-color: var(--gold-accent);
+    color: var(--gold-accent);
+}
+
+
+
+.btn-nav:hover {
+    background-color: var(--forest-deep);
+    color: var(--text-light) !important;
+}
+
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(30, 43, 34, 0.25) 0%, rgba(30, 43, 34, 0.5) 100%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    text-align: center;
+    padding: 0 20px;
+    color: var(--text-light);
+}
+
+.flower-icon {
+    font-size: 24px;
+    color: var(--gold-accent);
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+
+#classes {
+    padding: 140px 20px;
+    background-color: rgba(122, 141, 128, 0.05);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    text-align: center;
+    font-size: 42px;
+    color: var(--forest-deep);
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 15px;
+    color: var(--sage-muted);
+    margin-bottom: 80px;
+    font-style: italic;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.spiritual-card {
+    background-color: var(--bg-linen);
+    padding: 60px 40px;
+    border-radius: 24px;
+    text-align: center;
+    border: 1px solid rgba(122, 141, 128, 0.12);
+    box-shadow: 0 10px 30px rgba(30, 43, 34, 0.01);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.spiritual-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(30, 43, 34, 0.05);
+}
+
+.card-icon {
+    font-size: 32px;
+    color: var(--gold-accent);
+    margin-bottom: 24px;
+}
+
+.spiritual-card h3 {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    color: var(--forest-deep);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.spiritual-card p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--forest-deep);
+    opacity: 0.8;
+    margin-bottom: 32px;
+}
+
+footer {
+    background-color: var(--forest-deep);
+    color: var(--text-light);
+    padding: 100px 20px 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.namaste-sign {
+    margin-bottom: 50px;
+}
+
+.namaste-sign span {
+    font-size: 32px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.namaste-text {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-style: italic;
+    opacity: 0.95;
+    letter-spacing: 1px;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid rgba(253, 251, 247, 0.1);
+    margin-bottom: 40px;
+}
+
+.footer-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.social-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--gold-accent);
+} 
+
+.footer-right-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    gap: 12px;             
+}
+
+.footer-logo-wrapper {
+    display: block;
+    margin: 0;
+}
+
+.footer-logo-img {
+    height: 38px;     
+    width: auto;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-logo-img:hover {
+    opacity: 1;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a:hover {
+    color: var(--gold-accent);
+}
+
+@keyframes slow-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 48px;
+    }
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .spiritual-card {
+        padding: 50px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+    header {
+        height: 80px;
+    }
+    .nav-links {
+        display: none; 
+    }
+    .nav-container {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 38px;
+    }
+   .footer-meta { 
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px; 
+        text-align: center; 
+    }
+    .footer-right-group {
+        align-items: center; 
+    }
+}
